@@ -1,0 +1,42 @@
+.pcard {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 20px;
+  background: transparent;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.18s;
+  animation: fadeUp 0.35s ease both;
+  position: relative;
+}
+.pcard::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold), var(--gold-lt));
+  transform: scaleY(0);
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+  transform-origin: center;
+}
+.pcard:hover { background: rgba(201,168,76,0.04); }
+.pcard:hover::before { transform: scaleY(1); }
+.pcard:active { background: rgba(201,168,76,0.07); }
+
+.pcard-num {
+  font-family: 'Italiana', serif;
+  font-size: 22px; font-weight: 400;
+  color: var(--text3);
+  min-width: 30px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.pcard:hover .pcard-num { color: var(--gold); }
+
+.pcard-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.pcard-name { font-size: 13px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pcard-addr, .pcard-phone { font-size: 11px; font-weight: 300; color: var(--text3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.pcard-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.pcard-dist { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+.pcard-arrow { opacity: 0; transform: translateX(-4px); transition: all 0.2s; }
+.pcard:hover .pcard-arrow { opacity: 1; transform: translateX(0); }

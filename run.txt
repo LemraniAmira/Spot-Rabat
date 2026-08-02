@@ -1,0 +1,7 @@
+cd "C:\Users\LENOVO\Downloads\geo-app-rabat\backend"
+py -m uvicorn main:app --reload
+
+cd "C:\Users\LENOVO\Downloads\geo-app-rabat\frontend"
+npm start
+
+http://localhost:3000
