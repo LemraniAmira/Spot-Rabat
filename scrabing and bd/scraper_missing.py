@@ -5,7 +5,7 @@ from uuid import uuid4
 
 NEO4J_URI      = "bolt://localhost:7687"
 NEO4J_USER     = "neo4j"
-NEO4J_PASSWORD = "EL2002EL"
+NEO4J_PASSWORD = "VOTRE_MOT_DE_PASSE"  # ← remplacez par votre mot de passe Neo4j
 
 MISSING_FILTERS = [
     ("tourism"  , '"tourism"="museum"'      , "cat3"),
